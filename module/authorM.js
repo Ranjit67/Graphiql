@@ -8,4 +8,5 @@ const AuthorSchema = new Schema({
     type: Number,
   },
 });
+
 module.exports = model("Author", AuthorSchema);
