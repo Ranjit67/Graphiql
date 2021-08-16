@@ -1,9 +1,12 @@
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
+const cors = require("cors");
+const async = require("async");
 const schema = require("./schema/schema");
 const mongoose = require("mongoose");
 
 const app = express();
+app.use(cors());
 // database connection
 mongoose.connect(
   "mongodb+srv://ranjit_7:jW9GyIvTsq8OOztF@cluster0.y5crp.mongodb.net/learningAccessoriesDb?retryWrites=true&w=majority",
